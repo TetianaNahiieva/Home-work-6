@@ -1,0 +1,159 @@
+$color-green: #71a89e;
+$color-black: #22322F;
+$color-white: #f9f9f9;
+$color-grey: #303031;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1;
+}
+body {
+    background-color: $color-white;
+}
+    .container {
+            max-width: 1200px;
+            padding: 0 24px;
+            margin: 0 auto;
+    }
+    .header { 
+            padding-top: 60px;
+            margin-bottom: 15px;
+        &__menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        & button {
+            min-width: 98px;
+            min-height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid $color-black;
+            border-radius: 8px;
+            background-color: transparent;
+            &::before {
+                content: url('../img/icon-\ Menu.jpg');
+                width: 12px;
+                height: 12px;
+                margin-right: 13px;
+            }
+        }
+            & > ul {
+                display: none;
+            & > a {
+                font-size: 20px;
+                font-weight: 500;
+                text-decoration: none;
+                color: $color-grey;
+            }
+        }
+    }
+    .hero {
+            padding-bottom: 100px;
+        .container {
+            display: block;
+            justify-content: flex-start;
+            flex-direction: column;
+
+            &__text h1 {
+                font-size: 27px;
+                line-height: 43px;
+                color: $color-black;
+                margin-bottom: 25px;
+                font-weight: 400;
+            }
+            &__text p {
+                font-size: 16px;
+                color: $color-black;
+                line-height: 26px;
+                letter-spacing: -0.02em;
+                margin-bottom: 30px;
+                font-weight: 400;
+            }
+            &__text button {
+                min-width: 203px;
+                min-height: 44px;
+                font-size: 16px;
+                font-weight: 700px;
+                border: 2px solid $color-black;
+                background-color: $color-green;
+                border-radius: 8px;
+                color: $color-white;
+            }
+            &__illustration {
+                margin-bottom: 44px;
+                margin-top: -91px;
+            
+                &__illustration img {
+                
+                width: 308px;
+                height: 443px;
+                }
+            }
+        }
+    }
+        
+@media only screen and (min-width: 1200px) {
+    .header { 
+            margin-bottom: 55px;
+        & button {
+            display: none;    
+        }
+        &__menu ul {
+                display: flex;
+                flex: content;
+                &__menu li {
+                    list-style: none;
+                    color: $color-grey;
+                &__menu span a {
+                    color: $color-green;
+                }
+                &__menu a {
+                    padding: 10px;
+                }
+            }
+        }
+    }
+    .hero {
+            padding-bottom: 0;
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+       
+            &__text {
+                width: 551px;
+                order: -1; 
+           
+                &__text h1 {
+                    font-size: 48px;
+                    line-height: 72px;
+                    padding-top: 244px;
+                }
+                &__text p {
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+                &__text button {
+                    min-width: 222px;
+                    min-height: 67px;
+                    font-size: 18px;
+                    font-weight: 700px;
+                }
+            }
+            &__illustration {
+                margin-bottom: 0px;
+                margin-top: 1px;
+            
+                &__illustration img {
+                    width: 617px;
+                    height: 644px;
+                    font-weight: 100%;
+                }
+            }
+        }
+    }
+}
